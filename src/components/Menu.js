@@ -15,7 +15,7 @@ class Menu extends Component {
                 this.setState({ persons });
             })
     }
-    }
+
 
     render() {
 
