@@ -3,11 +3,20 @@ import NavBar from "./NavBar";
 import { connect } from 'react-redux'
 import {addQuantity, addToCart, subtractQuantity} from "./actions/cartActions";
 import {Card, Button, Row, Col} from "react-bootstrap";
-
+import axios from 'axios';
 class Menu extends Component {
     handleClick = (id)=>{
         this.props.addToCart(id);
     }
+    componentDidMount() {
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
+            .then(res => {
+                const persons = res.data;
+                this.setState({ persons });
+            })
+    }
+    }
+
     render() {
 
         let itemList = this.props.items.map(item=> {
