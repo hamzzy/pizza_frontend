@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import Menu from "./components/Menu";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Switch>
             <Route exact path="/" component={Main} />
           <Route exact path="/menu" component={Menu} />
-
+            <Route exact path="/cart" component={Cart} />
         </Switch>
 
     </div>

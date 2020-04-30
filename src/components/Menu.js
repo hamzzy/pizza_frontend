@@ -13,7 +13,7 @@ class Menu extends Component {
         let itemList = this.props.items.map(item=> {
             return(
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem' }}  key={item.id}>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Card.Title>{item.title}</Card.Title>
@@ -38,17 +38,17 @@ class Menu extends Component {
         );
     }
 }
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state)=> {
     return {
         items: state.items
     }
 }
-const mapDispatchToProps= (dispatch)=>{
 
-    return{
-        addToCart: (id)=>{dispatch(addToCart(id))},
-        addQuantity: (id)=>{dispatch(addQuantity(id))},
-        subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
+    const mapDispatchToProps = (dispatch) => {
+        return {
+            addToCart: (id)=>{dispatch(addToCart(id))}
+        }
     }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Menu);
+
+
+    export default connect(mapStateToProps, mapDispatchToProps)(Menu);

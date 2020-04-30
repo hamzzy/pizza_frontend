@@ -6,8 +6,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
-import rootReducer from './components/reducers/rootReducer'
-const store = createStore(rootReducer);
+import cartReducer from "./components/reducers/cartReducer";
+
+const store = createStore(cartReducer);
 
 ReactDOM.render(
     <Provider store={store}>

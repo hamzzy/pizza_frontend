@@ -3,26 +3,31 @@ import {Navbar,Nav,Jumbotron,Button} from 'react-bootstrap';
 
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
 
 class NavBar extends Component {
+
     render() {
+
+
+
         return (
             <div>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">PizzaCourt</Navbar.Brand>
+                    <Link  to="/" >    <Navbar.Brand href="#home">PizzaCourt</Navbar.Brand> </Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
 
                         </Nav>
                         <Nav >
-                            <Link  to="/" >  <Nav.Link href="#deets">Home </Nav.Link> </Link>
+                            <Nav.Link href="#home"> <Link  to="/" >  Home  </Link></Nav.Link>
                             <Nav.Link>
                                 <Link  to="/menu" >
                                 Menu
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link>   <i className="glyphicon glyphicon-shopping-cart"></i> My Cart </Nav.Link>
+                            <Nav.Link> <Link  to="/cart">My Cart </Link> </Nav.Link>
 
 
                         </Nav>
@@ -33,5 +38,12 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+
+const mapStateToProps = (state) => {
+
+    return {
+    }
+};
+
+export default connect(mapStateToProps)(NavBar);
 

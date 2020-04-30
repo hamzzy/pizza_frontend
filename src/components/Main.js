@@ -22,7 +22,7 @@ class Main extends Component {
 
                     </Carousel.Item>
                     <Carousel.Item className="bg2">
-                        <div className="overlay"></div>
+                        <div className="overlay"/>
 
                         <Container>
                             <Row>
@@ -44,7 +44,7 @@ class Main extends Component {
 
                     </Carousel.Item>
                     <Carousel.Item className="bg3">
-                        <div className="overlay"></div>
+                        <div className="overlay"/>
 
                         <Image
                             src={bg_2}
@@ -70,7 +70,7 @@ class Main extends Component {
                 <Container>
                     <Row>
                         <Col xs={6} md={4}>
-                            <span className="flaticon-diet ic"></span>
+                            <span className="flaticon-diet ic"/>
                             <h3 className="heading">Healthy Foods</h3>
                             <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                                 unorthographic.</p>
